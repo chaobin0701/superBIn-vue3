@@ -6,10 +6,14 @@ html {
   font-size: 14px;
 }
 body {
+  padding: 0;
+  margin: 0;
   height: 100%;
   color: #333;
   min-width: 1240px;
-  font: 1em/1.4 "Microsoft Yahei", "PingFang SC", "Avenir", "Segoe UI", "Hiragino Sans GB", "STHeiti", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
+  font: 1em/1.4 "Microsoft Yahei", "PingFang SC", "Avenir", "Segoe UI",
+    "Hiragino Sans GB", "STHeiti", "Microsoft Sans Serif", "WenQuanYi Micro Hei",
+    sans-serif;
 }
 ul,
 h1,
