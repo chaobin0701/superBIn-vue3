@@ -1,0 +1,52 @@
+[
+  {
+    "title": "PC商城(黑马小兔鲜项目)",
+    "link": "/xtx",
+    "data": {
+      "imgSrc": "xtx.jpg",
+      "brief": "账号:xiaotuxian001 密码:123456",
+      "developmentTime": "2022年7月",
+      "describe": "Vue3全家桶 / Vuex持久化 / axios封装请求 / 公共样式和变量全局引入 / 骨架屏 / 组件数据懒加载 / 图片懒加载 / 全局组件批量注册 /  弹窗和确认框工具函数封装 / 路由守卫"
+    }
+  },
+  {
+    "title": "点餐后台管理系统",
+    "link": "/back",
+    "data": {
+      "imgSrc": "guanli.jpg",
+      "brief": "点餐后台管理系统 账号:admin 密码:admin123",
+      "developmentTime": "2022年4月",
+      "describe": "Vue / Vue-router / node.JS / Echarts / Express / Axios / ES6 / elm框架 / 界面设计等..."
+    }
+  },
+  {
+    "title": "故宫博物馆首页",
+    "link": "/gugong",
+    "data": {
+      "imgSrc": "gugong.jpg",
+      "brief": "故宫博物馆首页",
+      "developmentTime": "2021年11月",
+      "describe": "HTML / CSS / CSS3 /JavaScript"
+    }
+  },
+  {
+    "title": "小米官网首页",
+    "link": "/xiaomi",
+    "data": {
+      "imgSrc": "xiaomi.jpg",
+      "brief": "小米官网首页",
+      "developmentTime": "2021年12月",
+      "describe": "HTML / CSS / CSS3 / JavaScript"
+    }
+  },
+  {
+    "title": "猫眼电脑首页",
+    "link": "/maoyan",
+    "data": {
+      "imgSrc": "maoyan.jpg",
+      "brief": "猫眼电脑首页",
+      "developmentTime": "2021年11月",
+      "describe": "HTML / CSS / CSS3 / JavaScript"
+    }
+  }
+]
