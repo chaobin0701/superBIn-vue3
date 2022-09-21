@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" ref="about">
     <MyTitle text="关于我" id="about"></MyTitle>
-    <div class="my-des" :class="{fadeInDown:into,animated:into,slow:into}">
+    <div class="my-des"  v-into="['slow','fadeInDown']">
       <p>我的github： <a :href="other.github" target="_blank">点击跳转</a></p>
       <p>我的笔记(语雀)： <a :href="other.yuque" target="_blank">点击跳转</a></p>
     </div>

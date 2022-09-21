@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <MyTitle text="与我联系" id="contact"></MyTitle>
-    <span>感谢你看到最后!~</span>
-    <span>联系电话:{{userInfo.phone}}&emsp;&emsp;&emsp; 邮箱地址:{{userInfo.email}}</span>
+    <span v-into="['fadeInLeft']">感谢你看到最后!~</span>
+    <span v-into="['fadeInRight']">联系电话:{{userInfo.phone}}&emsp;&emsp;&emsp; 邮箱地址:{{userInfo.email}}</span>
   </div>
 </template>
 

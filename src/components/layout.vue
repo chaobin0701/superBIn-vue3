@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- 顶部区域 -->
-    <AppHeader></AppHeader>
+    <AppHeader class="header-top"></AppHeader>
     <!-- 个人信息区域 -->
-    <AppUserInfo></AppUserInfo>
+    <AppUserInfo class="userInfo" ></AppUserInfo>
     <!-- 个人描述区域 -->
     <AppAboutMe></AppAboutMe>
     <!-- 项目经验区域 -->
@@ -20,8 +20,15 @@ import AppAboutMe from './app-aboutMe.vue'
 import AppMyProject from './app-myProject.vue'
 import AppContactMe from './app-contactMe.vue'
 
-import { reactive, ref } from 'vue'
 
 </script>
 <style scoped lang="less">
+.header-top{
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+}
+.userInfo{
+  margin-top: 60px;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="project-item" ref="project" :class="{zoomIn:into,animated:into}">
+  <div class="project-item" ref="project" v-into="['zoomIn']">
     <div class="img">
       <img :src="require(`@/assets/project-images/${data.data.imgSrc}`)" alt="" />
     </div>
@@ -20,8 +20,7 @@
         <li class="describe-item des">
           <span class="des-title">技术使用：</span>
           <span class="item-describe" v-for="(x, index) in data.data.describe.split('/')" :key="index"
-          :style="{ backgroundColor: `${color[colorChoose[index]]}` }"
-            >{{ x.trim() }}</span>
+            :style="{ backgroundColor: `${color[colorChoose[index]]}` }">{{ x.trim() }}</span>
         </li>
       </ul>
     </div>
@@ -47,8 +46,16 @@ const colorChoose = computed(()=>{
 </script>
 <style scoped lang="less">
 .project-item {
+  &:hover {
+    box-shadow: 0px 0px 15px rgba(37, 171, 190, .4);
+
+  }
+
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  background: #fff;
+  transition: all .5s;
+  border-radius: 10px;
   display: flex;
-  border: 2px #ccc solid;
   min-height: 200px;
   width: 48%;
   justify-content: center;
@@ -74,7 +81,7 @@ const colorChoose = computed(()=>{
   .desc {
     flex: 1;
     padding-left: 20px;
-    border-left: 2px #ccc solid;
+    border-left: 1px #ccc solid;
     height: 100%;
     display: flex;
     flex-direction: column;

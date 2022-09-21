@@ -2,15 +2,15 @@
   <div class="wrapper" ref="header">
     <div class="content">
       <div class="info-left">
-        <div class="zoom" :class="{fadeInLeft:into,animated:into}">
+        <div class="zoom"  v-into="['fadeInLeft']">
           <img src="https://img2.woyaogexing.com/2022/08/19/c5ac4b2dbfe55bbf!400x400.jpg"/>
         </div>
-        <div class="info flipInX animated delay-1s">
+        <div class="info"  v-into="['delay-1s','flipInX']">
           <p class="name">{{ userInfo.name }}</p>
           <p class="desc">{{ userInfo.motto }}</p>
         </div>
       </div>
-      <div class="info-right " :class="{fadeInRight:into,animated:into}">
+      <div class="info-right" v-into="['fadeInRight']">
         <ul>
           <li><span>联系邮箱:</span>{{ userInfo.email }}</li>
           <li><span>毕业学校:</span>{{ userInfo.school }}</li>

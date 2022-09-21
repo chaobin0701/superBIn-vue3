@@ -1,6 +1,6 @@
 <template>
-  <div class="title" :id="id" ref="title" :class="{isIn:into}">
-    <h3 :class="{flipInX:into,animated:into}">
+  <div class="title" :id="id" ref="title" v-into="['isIn']">
+    <h3 v-into="['flipInX']">
       {{ text }}
     </h3>
   </div>
@@ -18,7 +18,7 @@ const props = defineProps({
         default: ''
     }
 })
-const info = ref(false)
+const into = ref(false)
 
 
 </script>
@@ -28,12 +28,12 @@ const info = ref(false)
 
   &.isIn ::before,
   &.isIn ::after {
-    width: 300px;
-    animation: mymove 2s ease;
+    animation: mymove 1.5s ease;
     animation-fill-mode: forwards;
   }
 
   ::before {
+    width: 120px;
     border: 4px double #c2c2c2;
     display: inline-block;
     content: "";
@@ -42,6 +42,7 @@ const info = ref(false)
   }
 
   ::after {
+    width: 120px;
     border: 4px double #c2c2c2;
     display: inline-block;
     content: "";
@@ -60,12 +61,12 @@ const info = ref(false)
 
 @keyframes mymove {
   from {
-    width: 0px;
-    opacity: 0;
+    transform: scaleX(0);
+    opacity: .0;
   }
 
   to {
-    width: 120px;
+    transform: scaleX(1);
     opacity: 1;
   }
 }

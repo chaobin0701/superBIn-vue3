@@ -31,7 +31,7 @@ const change = (key) =>{
 .wrapper {
   padding: 40px 0 30px 0;
   width: 100%;
-  background-color: #fff;
+  background-color: @bg-2;
   display: flex;
   justify-content: center;
   flex-direction: column;
