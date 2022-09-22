@@ -3,7 +3,7 @@
     <div class="content">
       <div class="info-left">
         <div class="zoom"  v-into="['fadeInLeft']">
-          <img src="https://img2.woyaogexing.com/2022/08/19/c5ac4b2dbfe55bbf!400x400.jpg"/>
+          <img src="@/assets/images/head.jpg"/>
         </div>
         <div class="info"  v-into="['delay-1s','flipInX']">
           <p class="name">{{ userInfo.name }}</p>
@@ -52,7 +52,6 @@ let into = ref(false)
         width: 160px;
         height: 160px;
         box-sizing: border-box;
-        border: #fff 5px solid;
         overflow: hidden;
 
         img {
