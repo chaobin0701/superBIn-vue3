@@ -1,5 +1,14 @@
 [
   {
+    "title": "HRsass后台管理系统",
+    "link": "http://118.31.47.122:3340",
+    "data": {
+      "imgSrc": "HRsass.png",
+      "brief": "一个完整的人事管理系统",
+      "developmentTime": "2022年10月",
+      "describe": "Vue2全家桶 / vue-element-admin模板 / token失效的主动、被动处理 / 动态权限控制  / 全屏插件 /  员工信息导出excel / 批量导入员工信息 / 基于CDN分离模块的性能优化 / node代理跨域项目部署"
+    }
+  },{
     "title": "PC商城(黑马小兔鲜项目)",
     "link": "/xtx",
     "data": {

@@ -4,7 +4,8 @@
       <img :src="require(`@/assets/project-images/${data.data.imgSrc}`)" alt="" />
     </div>
     <div class="desc">
-      <a :href="other.mainPath + data.link" target="_blank">
+      <!-- 链接 -->
+      <a :href="computedUrl" target="_blank">
         <p class="tltle">{{ data.title }} ></p>
       </a>
       <ul class="describe">
@@ -28,21 +29,31 @@
 </template>
 
 <script setup>
-import { reactive, ref ,defineProps,inject,computed} from 'vue'
+import { IsURL } from '@/utils/handle.js'
+import { ref, defineProps, inject, computed } from 'vue'
 let into = ref(false)
 const color = ['rgba(252,151,175,.5)', 'rgba(135,247,207,.5)', 'rgba(247,244,148,.5)', 'rgba(114,204,255,.5)',
-                'rgba(247,197,160,.5)', 'rgba(212,164,235,.5)', 'rgba(210,245,166,.5)', 'rgba(43,130,29,.5)',
-                'rgba(63,177,227,.5)']
-const {data} = defineProps(['data'])
+  'rgba(247,197,160,.5)', 'rgba(212,164,235,.5)', 'rgba(210,245,166,.5)', 'rgba(43,130,29,.5)',
+  'rgba(63,177,227,.5)']
+const { data } = defineProps(['data'])
 const other = inject('other')
 // 随机选择颜色
-const colorChoose = computed(()=>{
+const colorChoose = computed(() => {
   let res = []
-    for (let i = 0; i < 20; i++) {
-        res.push(Math.floor(Math.random() * color.length))
-    }
-    return res
+  for (let i = 0; i < 20; i++) {
+    res.push(Math.floor(Math.random() * color.length))
+  }
+  return res
 })
+const computedUrl = computed(() => {
+  // 判断这个url是否为完整的链接
+  // 如果是完整的链接就直接返回,如果不是就拼接固定地址之后返回
+  if (IsURL(data.link)) {
+    return data.link
+  } else {
+    return other.mainPath + data.link
+  }
+})  
 </script>
 <style scoped lang="less">
 .project-item {
